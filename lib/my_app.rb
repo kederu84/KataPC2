@@ -9,8 +9,8 @@ class MyApp < Sinatra::Base
     erb :contacto
   end
 
-  post '/contacto' do
-    erb :contacto_enviado
+  post '/enviardatos' do
+    erb :enviado_enviado
   end
 
   # start the server if ruby file executed directly

@@ -12,7 +12,7 @@ class MyApp < Sinatra::Base
   post '/enviardatos' do
 
   	if params[:username] == "" or params[:nombre] == "" or params[:apepaterno] == "" or params[:apematerno] == ""
-        erb :index_error
+        "Falta llenar Datos"
     else
    	    erb :enviado_enviado
     end

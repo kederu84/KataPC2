@@ -1,8 +1,22 @@
 require 'sinatra/base'
 
-class MyApp2 < Sinatra::Base
+class MyApp < Sinatra::Base
   get '/' do
-    'Hello MyApp2!'
+    erb :index
+  end
+
+  get '/contacto' do
+    erb :contacto
+  end
+
+  post '/enviardatos' do
+
+  	if params[:username] == "" or params[:nombre] == "" or params[:apepaterno] == "" or params[:apematerno] == ""
+    "Falta llenar Datos"
+    else
+   	 erb :enviado_enviado
+    end
+    	
   end
 
   # start the server if ruby file executed directly

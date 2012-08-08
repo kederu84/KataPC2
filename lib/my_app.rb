@@ -5,12 +5,21 @@ class MyApp < Sinatra::Base
     erb :index
   end
 
-  get '/contacto' do
-    erb :contacto
-  end
-
   post '/enviardatos' do
-    erb :enviado_enviado
+    #if username.length == "" ||  apepaterno.length == "" 
+    #  erb :index
+    # else 
+    #  erb :enviado_enviado
+    #end
+    
+
+
+     if request.body.username == ""  
+      erb :index
+      
+     # erb :enviado_enviado
+    end
+    
   end
 
   # start the server if ruby file executed directly

@@ -14,11 +14,13 @@ class MyApp < Sinatra::Base
     
 
 
-     if request.body.username == ""  
-      erb :index
-      
-     # erb :enviado_enviado
-    end
+     if params[:username] == "" ||  params[:nombre] == "" ||  params[:apepaterno] == "" ||  params[:apepaterno] == ""
+       
+       erb :index_error
+
+     else
+       erb :enviado_enviado
+     end
     
   end
 
